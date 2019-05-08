@@ -1,76 +1,137 @@
-Jekyll Clean Dark
-============
+# Jekyll-Mono
 
-[![Gem Version](https://badge.fury.io/rb/jekyll-clean-dark.svg)](https://badge.fury.io/rb/jekyll-clean-dark)
+**Jekyll-Mono** is a simple and elegant GitHub Profile cum Blog theme based on Barry Clark's [Jekyll-Now](https://github.com/barryclark/jekyll-now). It's a result of my attempt to learn **Jekyll** and create a minimalistic theme to put up my CV alongwith some blog posts.
 
-This theme was created on top of Jekyll Clean theme by Scotte, you can view the original version in action [on his blog](https://scotte.github.io).
+It is crafted with 💙 by [Akshay Agarwal](https://github.com/AkshayAgarwal007).
 
-* Get it from [github](https://github.com/streetturtle/jekyll-clean-dark).
-* See the [live demo](http://pavelmakhov.com/jekyll-clean-dark).
-* See it [in action on my own blog](http://pavelmakhov.com).
-* Easily [customizable](http://pavelmakhov.com/jekyll-clean-dark/2016/09/customizations)
+![Jekyll-Mono Home Page](/images/ss.png)
 
-![preview1](./assets/images/preview1.jpg)
-![preview2](./assets/images/preview2.jpg)
-![preview3](./assets/images/preview3.jpg)
 
-This theme uses some parts of Twitter Bootstrap, which allows it to look nice on a mobile devices using a collapsable nav bar and hiding the
-sidebar.
+## What is Jekyll?
 
-Some cool features:
+It is a static site generator. It takes your content written in Markdown, passes it through your templates and spits it out as a complete static website, ready to be served using GitHub pages for free.
+Because your entire blog is static it serves and perform faster. It consumes less web resources namely memory and I/O.
 
- - [Disqus](http://disqus.com) as a comments system;
- - [Google Analytics](http://www.google.com/analytics/);
- - [Yandex Metrica](http://metrica.yandex.com);
- - Blog tags - check the section below;
- - [Share buttons](http://pavelmakhov.com/jekyll-clean-dark/2016/09/be-social);
- - [Table Of Content](http://pavelmakhov.com/jekyll-clean-dark/2018/08/table-of-content);
- - Bootstrap 4 and FontAwesome 5!
- - [Stats page](http://pavelmakhov.com/jekyll-clean-dark/stats) - WIP
+## Getting Started
 
-All these features could be set up in `_config.yml`. Also you can have social icons which could lead to your social profiles. It uses [font-awesome](http://fontawesome.io/), so you can have any icon you want to any social profile. Out-of-the box it has: LinkedIn, GitHub, StackOverflow, LastFm, Instagram. And you can easily add more by adding new style in `theme.css` and setting it in `_config.yml`.
+Let's quickly set up your new blog in a matter of minutes.
 
-Installation
-============
+### Fork this repository
 
-If you don't have your own blog you can clone this repository and put your articles in a `_posts` folder.
-If you already have your own blog then I think you can clone this repository and copy-paste content keeping your `_posts` folder.
+Hit the “Fork” button in the top-right corner of the repository to fork a copy of this theme to your GitHub account and rename it to **yourusername.github.io** and then visit https://yourusername.github.io and you'll be able to see your newly created blog using Jekyll-Mono.
 
-After you will have to set up your `_config.yml`
+### Customise Jekyll-Mono
 
-Gem Installation
-================
+So now your blog is live with its default settings. Let's customise it now.
 
-Follow the instructions on the Jekyll [site](https://jekyllrb.com/docs/themes/). Then copy the following files from this repository:
+Edit the _config.yml and enter your site name and description. You can easily turn on Google Analytics tracking, Disqus commenting and cool loking social icons here too.
 
- -_config.yml
- - about.md
- - admin.md
- - archive.html
- - feed.xml 
+Jekyll-Mono also comes with the option of setting up the color scheme of your blog. You can do this by editing _variables.scss that lies inside the _sass folder. You can change the main theme color by simply replacing the current hex color value of `$mono` with the one of your choice. A few main theme sample colors are included in there as comments. Apart from the main theme color you can also change the header link color, navbar hover color, hyperlink color as well as the color of the various headings.
+
+A look at the customisations you can do with _variable.scss
+
+```
+// Main theme colors 
+// Some cool main theme colors(violet:#8476ad;blue:#5cacee;red:#ff7373,#ff6f69;green:#6acf64,#2ddbb3;orange:#ffa268)
+
+$mono-color:#8476ad;                // main theme color(header, links, footer icons, buttons, post-title)
+$hl-color: $darkGray;              // header link color (author name and posted on date) for blog post meta 
+$navbar-hover-color:$gray;        // navbar hover color (site name and navbar links hover color)
+$link-color: $darkerGray;        // normal hyperlink color other than the ones above.
+
+
+// Heading colors
+// You can play around with these too!
+$h1-color: $mono-color;
+$h2-color: $mono-color; 
+$h3-color: $darkerGray; 
+$h4-color: $gray;
+``` 
+Have a look at Jekyll-Mono with four different main theme colors.
  
-Blog tags
-=========
+![Jekyll Mono in 4 different colors](/images/ss-color.png)
 
-To use this feature you simply will need to create a markdown file for each tag which you are using in you site in **tag** folder. To simplify this procedure there is an [/admin](http://pavelmakhov.com/jekyll-clean-dark/admin.html) page, which outputs the bash command which you just need to run inside **tag** folder of your site. Also don't forget to rerun it when you add a post with new tag.
+Finally you need to set up your avatar. Pick up your avatar, resize it to 220x220px simply using paint or any editor of your choice and upload it to the images folder. Now open _variables.scss, you'll see something like this `$avatar: "/images/avatar.jpg";`. Here change the avatar.jpg to what you have uploaded just now.
 
-License
-=======
 
-The content of this theme is distributed and licensed under a
-[Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/legalcode)
+### Start Blogging
 
-    This license lets others distribute, remix, tweak, and build upon your work,
-    even commercially, as long as they credit you for the original creation. This
-    is the most accommodating of licenses offered. Recommended for maximum
-    dissemination and use of licensed materials.
+Publish your first blog post by editing /_posts/2016-03-06-Eternal-Lorem-Ipsum.md. [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) might come in handy while writing your blog posts in Markdown. If you are not comfortable with writing in Markdown you can use [Prose](http://prose.io/) for writing your blog posts. [This](https://developmentseed.org/blog/2012/june/25/prose-a-content-editor-for-github/s) will help you in setting up prose.
 
-In other words: you can do anything you want with this theme on any site, just please
-provide a link to the original theme on github.
+![Post](/images/post.PNG)
 
-This theme includes the following files which are the properties of their
-respective owners:
+To create a post just click on create new file button in /_posts/. Create a new file with the following naming convention: **year-month-day-title.md**. Also make sure to include the front-matter at the top of each new blog post.
 
-* js/bootstrap.min.js - [bootstrap](http://getbootstrap.com)
-* css/bootstrap.min.css - [bootstrap](http://getbootstrap.com)
-* js/jquery.min.js - [jquery](https://jquery.com)
+You can see the front matter at the top of /_posts/2016-03-06-Eternal-Lorem-Ipsum.md. It looks something like this. You have to change the title and author according to your post. The layout will remain the same.
+
+```
+--- 
+layout: post
+title: The Eternal Lorem Ipsum Placeholder Text Here
+author: Author Name
+---
+
+```
+
+### About and Projects Page
+
+In the parent folder you'll find about.md and projects.md. These are templates for helping you to set up your biodata/CV and projects that will be available at yourusername.github.io/about and yourusername.github.io/projects respectively. Again you can edit it in Markdown on GitHub or using Prose as per your choice.
+
+
+## Demo
+
+You can see the live demo of this theme at http://akshayagarwal007.github.io/Jekyll-Mono/
+
+## Local Development
+
+For setting up your development environment you can follow the official Jekyll [Documentation](https://jekyllrb.com/docs/installation/). It's a little bit complicated for Windows users. Let's see how it's done on windows:
+
+1. **Install Chocolatey**. **[Chocolatey](https://chocolatey.org)** is a package manager for windows. It's awesome. 
+   Open a command propmt with administrator access. Paste this. Hit Enter and restart the command prompt.
+   
+   ```
+   @powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
+   
+   ```
+
+2. **Install Ruby** : In your command prompt type `choco install ruby -y`.
+ Hit Enter. After installation restart the cmd with administrator privileges.
+
+3. **Install Jekyll/Sass (plug-ins used by GitHub Pages)**: `gem install github-pages`
+
+4. **Clone your fork of Jekyll-Mono** `git clone https://github.com/yourusername/yourusername.github.io.git`
+
+5. **Serve the site** by `jekyll serve`. It regenerates itself after any changes has been made.
+
+6. **View your site** at http://127.0.0.1:4000/
+
+7. If you make any changes to _config.yml you'll need to rebuild the site using `jekyll build` and then again a `jekyll serve` to serve it. You'll need to do a rebuild only if you want to see the changes locally, else you can simply commit your changes and push them to your GitHub repo, GitHub pages will rebuild and serve your website.
+
+## Credits
+
+* [Barry Clark](https://github.com/barryclark) for creating [Jekyll-Now](https://github.com/barryclark/jekyll-now) on which this theme is based.
+* [Manoela Ilic](https://github.com/crnacura) of Codrops for writing awesome articles on web design.
+* [David Miller](https://github.com/davidtmiller) of Blackrock Digital for making awesome open source themes.
+* [Jekyll](https://github.com/jekyll/jekyll) - Thanks to its creator and contributors.
+* [Font-Awesome](http://fontawesome.io) - Thanks to its creator and contributors.
+
+## Contributing
+
+* Found a bug? Report it on GitHub [Issues](https://github.com/AkshayAgarwal007/Jekyll-Mono/issues) and include a code sample.
+* [Fork](https://github.com/AkshayAgarwal007/Jekyll-Mono/fork) the repository and start your own blog using it and let me know about it so that I can include a reference to it here. Probably the best way you can contribute :)
+* If you find anything that's wrong or want to talk to me about anything related to this theme or want to contribute in any way, please feel free to [mail me](mailto:agarwal.akshay.akshay8@gmail.com).
+
+## License
+
+Jekyll-Mono is licensed under [MIT](https://github.com/AkshayAgarwal007/Jekyll-Mono/blob/master/LICENSE.txt).
+
+
+
+
+
+
+
+
+
+
+  
